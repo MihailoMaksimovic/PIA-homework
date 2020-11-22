@@ -1,0 +1,99 @@
+html { 
+    background-color: rgb(247, 247, 218);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12pt ;   
+    width: 55%;
+    margin: auto;
+    align-self: center;
+
+}
+
+body { 
+
+}
+
+header { 
+    text-align: center;
+    font-size: 24pt;
+    font-weight: bold;
+    text-shadow: 3px 3px #999999;
+}
+
+.container { 
+    display: flex;
+    align-self: center;
+    flex-direction: row;
+    justify-content: stretch ;
+
+}
+
+.procenat { 
+    background-image: url("./images/rbg.png");
+    display: flex;
+}
+.procenatBroj { 
+ font-size: 50px ;
+ color: red; 
+ padding: 10px;
+}
+
+.levaStrana { 
+    background-color:#EEEEEE ;
+    border-width: 5px;
+    border-collapse: separate;
+    border-spacing: 5px;
+}
+
+.desnaStrana { 
+    width: min-content;
+    background-color: #A2B964;
+    box-shadow: 5px 0px 15px gray;
+}
+
+.quotebubble {
+    background-color: #FFFFFF;
+    border-radius: 12px;
+    margin-left: 20px;
+    margin-right: 20px;
+    padding: 1em;
+    border-style: solid;
+    border-width: 2px;
+    border-color: #CCCCCC;
+}
+
+.people {
+    border-radius: 10px;
+    margin-left: 20px;
+    margin-right: 20px;
+    padding: 10px;
+   font-size: 13pt ; 
+}
+
+.imgPeople { 
+    float: left;
+    margin-right: 5px;
+}
+.publication{ 
+    font-size: 13pt;
+}
+
+span { 
+    font-style: italic;
+}
+ img { 
+    float: left;
+ }
+
+q { 
+    margin-left: 2px;
+}
+
+dt { 
+    font-weight: bold;
+    padding-top: 15px;
+}
+
+footer { 
+    background-color: #A2B964;
+    width: 100%;
+}
