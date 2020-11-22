@@ -1,0 +1,41 @@
+body, html {
+    height: 100%;
+  }
+
+
+.nav { 
+    background: linear-gradient(90deg, rgb(8, 8, 8) 0%, rgb(52, 52, 63) 35%, rgb(0, 0, 0) 100%) ;
+}
+.nav-link { 
+    color: orange;
+    text-shadow: 2px 2px #d0ff00;
+     font-size: 2rem !important ;
+     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+}
+
+.nav-link:hover { 
+
+    color: rgb(97, 66, 0) ;  
+}
+
+body { 
+    background-image: url("background.jpg") ;
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.container  { 
+    font-family: cursive;
+    padding: 15px;
+    margin-top: 5vh ;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.712);
+    box-shadow: 1px 1px 2px black, 0 0 25px rgb(80, 80, 80), 0 0 5px rgb(3, 3, 3);
+}
+
+footer { 
+    margin: auto; 
+    background-color: red;
+}
