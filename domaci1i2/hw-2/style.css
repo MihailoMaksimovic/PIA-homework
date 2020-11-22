@@ -36,6 +36,11 @@ body {
 }
 
 footer { 
-    margin: auto; 
-    background-color: red;
+    position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.288);
+  color: white;
+  text-align: center;
 }
