@@ -27,6 +27,7 @@ body {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    background-attachment: fixed;
 }
 
 .container  { 
@@ -46,6 +47,7 @@ footer {
   background-color: rgba(0, 0, 0, 0.288);
   color: white;
   text-align: center;
+
 }
 
 .forma-kontakti { 
@@ -56,4 +58,5 @@ footer {
     color: white;
     background-color: rgba(0, 0, 0, 0.712);
     box-shadow: 1px 1px 2px black, 0 0 25px rgb(80, 80, 80), 0 0 5px rgb(3, 3, 3);
+
 }
