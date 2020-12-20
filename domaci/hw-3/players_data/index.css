@@ -1,0 +1,37 @@
+.html,
+body {
+  /* background-image: url("./pictures/background.jpg");
+  background-repeat: no-repeat;
+  background-size: 100% 350%;
+  position: absolute; */
+  height: 100%;
+  width: 100%;
+  margin: 0;
+}
+
+body {
+  display: flex;
+  background-image: url("../pictures/background.jpg");
+  background-repeat: no-repeat;
+  background-size: 100% 150%;
+}
+
+.form-design {
+  margin: 15vh auto;
+}
+
+.card {
+  width: 60vh;
+  height: 50vh;
+  background-color: rgba(114, 114, 114, 0.603);
+}
+
+.btn {
+  background-color: rgba(0, 0, 0, 0.733);
+  color: rgb(71, 124, 71);
+}
+
+.btn:hover {
+  background-color: rgb(71, 124, 71);
+  color: white;
+}
