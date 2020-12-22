@@ -1,0 +1,75 @@
+.html,
+body {
+  /* background-image: url("./pictures/background.jpg");
+  background-repeat: no-repeat;
+  background-size: 100% 350%;
+  position: absolute; */
+  height: 100%;
+  width: 100%;
+  margin: 0;
+}
+
+body {
+  display: flex;
+  background-image: url("../pictures/background.jpg");
+  background-repeat: no-repeat;
+  background-size: 100% 200%;
+}
+.jumbotron {
+  width: 100%;
+  height: 30rem;
+  margin: 5rem 2rem 2rem 2rem;
+}
+
+.btn_display {
+  align-self: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.btn {
+  margin-top: 13rem;
+  margin-left: 5rem;
+  margin-right: 5rem;
+  background-color: rgba(0, 0, 0, 0.733);
+  color: rgb(71, 124, 71);
+  width: max-content;
+}
+
+.btn:hover {
+  background-color: rgb(71, 124, 71);
+  color: white;
+}
+
+.slide {
+  margin-top: 7rem;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  z-index: 1;
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+.active-slide {
+  opacity: 1;
+  z-index: 2;
+}
+
+.question {
+  font-size: 30px;
+  margin-bottom: 10px;
+  color: rgb(21, 59, 21);
+  background-color: rgba(0, 214, 0, 0.356);
+
+}
+.answers {
+  margin-bottom: 20px;
+  text-align: left;
+  display: inline-block;
+}
+.answers label {
+  display: block;
+  margin-bottom: 10px;
+}

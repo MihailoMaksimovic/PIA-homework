@@ -1,0 +1,108 @@
+[
+  {
+    "type" : "radio" , 
+    "question": "A cell uses which of the following to accelerate chemical reactions enabling its metabolic machinery to operate?",
+    "answers": {
+      "a": "Centrasome",
+      "b": "Lysosome",
+      "c": "Golgi apparatus",
+      "d": " Enzymes"
+    },
+    "correctAnswer": "d"
+  },
+  {
+    "type" : "radio" , 
+    "question": "The major parts of a cell are the ______________?",
+    "answers": {
+      "a": "surrounding membrane",
+      "b": "surrounding membrane and cytoplasm",
+      "c": "surrounding membrane, cytoplasm and nucleus",
+      "d": "surrounding membrane, cytoplasm, nucleus and mitochondria"
+    },
+    "correctAnswer": "c"
+  },
+  {
+    "type" : "radio" , 
+    "question": "Light initiates different types of cellular reactions. Which of the following responses to light converts the energy from light into a gain of potential energy?",
+    "answers": {
+      "a": "Phototaxis",
+      "b": "Photoperiodism",
+      "c": "Photosynthesis",
+      "d": "All of the above"
+    },
+    "correctAnswer": "c"
+  },
+  {
+    "type" : "radio" , 
+    "question": "The functional unit of heredity is the _____________.",
+    "answers": {
+      "a": "gene",
+      "b": "chromosome",
+      "c": "protein",
+      "d": "nucleus"
+    },
+    "correctAnswer": "a"
+  },
+  {
+    "type" : "input" , 
+    "question": "DNA exists in the form of __________ strands of DNA coiled about each other.Number of them?",
+    "answers": {
+
+    },
+    "correctAnswer": "2"
+  },
+  {
+    "type" : "radio" , 
+    "question": "There are two types of cells, eukaryotic and prokaryotic.",
+    "answers": {
+      "a": "True",
+      "b": "False"
+    },
+    "correctAnswer": "a"
+  },
+  {
+    "type" : "input" , 
+    "question": "How many chromosomes does an individual human person have?",
+    "answers": {
+
+    },
+    "correctAnswer": "46"
+  },
+  {
+    "type" : "radio" , 
+    "question": "Sterile female honey bees are called _________________.",
+    "answers": {
+      "a": "drones",
+      "b": "queen",
+      "c": "guards",
+      "d": "workers"
+    },
+    "correctAnswer": "d"
+  },
+  {
+    "type" : "radio" , 
+    "question": "In normal sexual reproduction, two mature germ cells fuse to form a _____________.",
+    "answers": {
+      "a": "gonad",
+      "b": "ovary",
+      "c": "embryogeny",
+      "d": "zygote"
+    },
+    "correctAnswer": "d"
+  },
+  {
+    "type" : "radio" , 
+    "question": "Hybridization of animals from different species cannot occur.",
+    "answers": {
+      "a": "True",
+      "b": "False"
+    },
+    "correctAnswer": "b"
+  },
+  {
+    "type" : "radio" , 
+    "question": "Finish, good job!"
+
+  }
+
+]

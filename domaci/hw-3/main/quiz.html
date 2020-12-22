@@ -7,9 +7,35 @@
   crossorigin="anonymous"
 />
 <link href="./quiz.css" rel="stylesheet" />
-<script src="./main.js"></script>
+
 <html>
   <body>
-    quiz
+    <div
+      class="jumbotron card card-image"
+      style="background-color: rgba(0, 128, 128, 0.582); align-items: center"
+    >
+      <div class="text-white text-center py-5 px-4">
+        <div>
+          <h2
+            id="timer"
+            class="card-title h1-responsive pt-3 mb-5 font-bold"
+          ></h2>
+          <p class="mx-5 mb-5"></p>
+        </div>
+        <div id="quiz-container" class="quiz-container">
+          <div id="quiz"></div>
+        </div>
+      </div>
+      <div class="btn_display">
+        <button id="next" class="btn btn-outline-white btn-md">
+          Next Question
+        </button>
+        <button id="submit" class="btn btn-outline-white btn-md">
+          Results
+        </button>
+      </div>
+      <div id="results"></div>
+    </div>
   </body>
+  <script src="./main.js"></script>
 </html>
