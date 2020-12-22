@@ -15,13 +15,16 @@ fetch("./base.json")
     const quizContainer = document.getElementById("quiz");
     const resultsContainer = document.getElementById("results");
 
+    document.getElementById("next").style.visibility = "visible";
+    document.getElementById("quit").style.visibility = "visible";
+    document.getElementById("submit").style.visibility = "visible";
+
     function buildQuiz() {
-      // variable to store the HTML output
       const output = [];
 
       var start = Date.now();
       function myTimer() {
-        var delta = Date.now() - start; // milliseconds elapsed since start
+        var delta = Date.now() - start;
         document.getElementById("timer").innerHTML = timerValue;
         timerValue = timerValue - 1;
         if (gameOver == 1) {
@@ -36,7 +39,7 @@ fetch("./base.json")
 
       function myStopFunction() {
         clearInterval(myVar);
-        timerValue = "Keep it up!";
+        timerValue = "Write your name and see are you in top ten!!!";
         document.getElementById("timer").innerHTML = timerValue;
         const playerInput = `<label>
               <input  type="input" id="player_name" >
@@ -46,14 +49,10 @@ fetch("./base.json")
 
       var myVar = setInterval(myTimer, 1000);
 
-      // for each question...
       myQuestions.forEach((currentQuestion, questionNumber) => {
-        // variable to store the list of possible answers
         const answers = [];
         if (currentQuestion.type == "radio") {
-          // and for each available answer...
           for (letter in currentQuestion.answers) {
-            // ...add an HTML radio button
             answers.push(
               `<label>
                 <input type="radio" name="question ${questionNumber}" value="${letter}">
@@ -63,7 +62,6 @@ fetch("./base.json")
             );
           }
 
-          // add this question and its answers to the output
           output.push(
             `<div class="slide">
               <div id="question ${numberOfAnswer}" class="question"> ${
@@ -73,15 +71,12 @@ fetch("./base.json")
           </div>`
           );
         } else {
-          // and for each available answer...
-          // ...add an HTML radio button
           answers.push(
             `<label>
                 <input id="input ${inputNumber}" type="input" >
               </label>`
           );
 
-          // add this question and its answers to the output
           output.push(
             `<div class="slide">
               <div class="question"> ${currentQuestion.question} </div>
@@ -90,25 +85,11 @@ fetch("./base.json")
           );
           inputNumber += 1;
         }
-
-        // if (
-        //   document.getElementsByName("question").values ==
-        //   currentQuestion.correctAnswer
-        // ) {
-        //   const questions = document.getElementsByClassName(".question");
-        //   questions[questionNumber].style.color = "lightgreen";
-        //   await;
-        // } else {
-        //   questions = document.getElementsByClassName(".question");
-        //   questions.style = "red";
-        // }
       });
 
-      // finally combine our output list into one string of HTML and put it on the page
       quizContainer.innerHTML = output.join("");
     }
 
-    // display quiz right away
     buildQuiz();
 
     const nextButton = document.getElementById("next");
@@ -160,7 +141,6 @@ fetch("./base.json")
           player_score += 1;
           answerContainers[numberOfAnswer].style.color = "lightgreen";
         } else {
-          // document.getElementById("quiz-container").style.backgroundColor = "red";
           answerContainers[numberOfAnswer].style.color = "red";
         }
       }
@@ -172,8 +152,6 @@ fetch("./base.json")
 
       showSlide(currentSlide + 1);
     }
-
-    // on submit, show results
 
     function showSlide(n) {
       setTimeout(() => {
