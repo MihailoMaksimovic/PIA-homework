@@ -134,7 +134,7 @@ fetch("./base.json")
         }
       }
       console.log("pitanje:   " + numberOfAnswer);
-      console.log("rezultat:   " + player_score);
+
       console.log("broj odgovorra:  " + numberOfAnswer);
       console.log("input1:   " + inputBox1);
       console.log("input2:   " + inputBox2);
@@ -164,7 +164,7 @@ fetch("./base.json")
           answerContainers[numberOfAnswer].style.color = "red";
         }
       }
-
+      console.log("rezultat:   " + player_score);
       if (gameOver == 0) {
         timerValue = 20;
         numberOfAnswer += 1;
@@ -199,13 +199,10 @@ fetch("./base.json")
 
     nextButton.addEventListener("click", showNextSlide);
     quitButton.addEventListener("click", function () {
-      showSlide(10);
-      timerValue = "Keep it up!";
-      document.getElementById("timer").innerHTML = timerValue;
-      const playerInput = `<label>
-            <input  type="input" id="player_name" >
-          </label>`;
-      document.getElementById("quiz").innerHTML = playerInput;
+      nextButton.style.display = "none";
+      quitButton.style.display = "none";
+      submitButton.style.display = "inline-block";
+      gameOver = 1;
     });
     submitButton.addEventListener("click", function () {
       player_name = document.getElementById("player_name");

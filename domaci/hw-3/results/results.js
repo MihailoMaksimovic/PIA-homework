@@ -2,6 +2,7 @@ var score_table = document.getElementById("results");
 var arrayScore = [];
 var firstTenArrayScore = [];
 var stringComparison;
+
 function markupResults() {
   var itemKey;
   var values;
@@ -13,17 +14,19 @@ function markupResults() {
 
   for (let i = 0; i < arrayScore.length; i++) {
     for (let j = i + 1; j < arrayScore.length - 1; j++) {
-      if ((arrayScore[i][1] = arrayScore[j][1])) {
+      if (arrayScore[i][1] == arrayScore[j][1]) {
         string1 = arrayScore[i][0];
         string2 = arrayScore[j][0];
-        stringComparison = string1.localeCompare(string2);
-        if (stringComparison > 0) {
+        stringComparison = string1
+          .toLowerCase()
+          .localeCompare(string2.toLowerCase());
+        if (stringComparison < 0) {
           temp = arrayScore[j];
           arrayScore[j] = arrayScore[i];
           arrayScore[i] = temp;
         }
       }
-      if (arrayScore[i][1] < arrayScore[j][1]) {
+      if (arrayScore[i][1] * 1 < arrayScore[j][1] * 1) {
         temp = arrayScore[j];
         arrayScore[j] = arrayScore[i];
         arrayScore[i] = temp;
@@ -31,8 +34,10 @@ function markupResults() {
     }
   }
 
+  console.log(localStorage);
+
   for (let i = 0; i < 10; i++) {
-    firstTenArrayScore[i] = arrayScore[i];
+    firstTenArrayScore[i] = [arrayScore[i][0], arrayScore[i][1]];
   }
 
   console.log(arrayScore.length);
