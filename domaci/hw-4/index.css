@@ -1,0 +1,74 @@
+body { 
+    background-image: url(pozadina.jpg)  ;
+    height: 100vh ;
+    background-size: cover ;
+    background-position: center;
+}
+
+.login-page {
+    width: 350px;
+    padding: 10% 0 0  ;
+    margin: auto ;
+    align-self: left;
+}
+
+.form  { 
+    position: relative;
+    z-index: 1;
+    background-color: rgba(145, 145, 145, 0.356);
+    max-width: 450px ; 
+    margin: 0 auto 100px ;
+    padding: 45px  ;
+    text-align: center;
+}
+
+.form input { 
+    font-family: "Roboto " , sans-serif;
+    outline: 1 ;
+    background: #f2f2f2 ;
+    width: 100% ;
+    border: 0 ;
+    margin: 0 0 15px ;
+    padding: 15px ;
+    box-sizing:  border-box ;
+    font-size:  14px ;
+}
+
+select { 
+    font-family: "Roboto " , sans-serif;
+    outline: 1 ;
+    width: 260px  ;
+    border: 0 ;
+    margin: 0 0 15px ;
+    padding: 15px ;
+    box-sizing:  border-box ;
+    font-size:  14px ;
+}
+.form button { 
+    font-family: "Roboto " , sans-serif;
+    text-transform: uppercase;
+    outline: 1 ;
+    background: #c7b6b6 ;
+    color: whitesmoke ;
+    width: 100% ;
+    border: 0 ;
+    padding: 15px ; 
+    box-sizing:  border-box ;
+    font-size:  14px ;
+    cursor: pointer;
+}
+
+ form p,a {
+     text-align: center;
+    color: rgb(65, 65, 65);
+    padding: 10px ;
+ }
+ 
+label{
+    text-align: start ;
+    padding:5px;
+    color:#222;
+    font-family:corbel,sans-serif;
+    font-size: 20px;
+    margin: 10px; 
+} 
