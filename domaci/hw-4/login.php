@@ -10,7 +10,7 @@ if (isset($_POST["Login"])) {
    $result = mysqli_query($link, $sql);
    if (mysqli_num_rows($result) > 0) {
       $row = mysqli_fetch_array($result);
-      if (true) { // password_verify($lozinka, $row["lozinka"])) {
+      if (password_verify($lozinka, $row["lozinka"])) {
          $_SESSION["email"]  =  $email;
          $_SESSION["ime"]  =  $row["ime"];
          $_SESSION["prezime"]  =  $row["prezime"];
