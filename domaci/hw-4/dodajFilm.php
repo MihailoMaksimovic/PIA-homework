@@ -44,7 +44,6 @@
         </div>
         <ul>
             <li><a href="dodajFilm.php"> <i class="fas fa-trophy"> </i> Dodaj film </a></li>
-            <li><a href="prijava.html"> <i class="far fa-calendar"> </i> Izbrisi film </a></li>
             <li><a href="main.php"> <i class="fas fa-user"> </i> Lista filmova </a></li>
             <li><a href="logout.php"> <i class="fas fa-outdent"> </i> Izloguj se </a></li>
         </ul>
@@ -56,7 +55,6 @@
             </div>
             <div>
                 <a href="dodajFilm.php"> <i class="fas fa-trophy" id="trofej" onmouseover="MouseOver1()"></i> </a>
-                <a href="prijava.html"> <i class="far fa-calendar" id="kalendar" onmouseover="MouseOver2()"></i></a>
                 <a href="main.php"> <i class="fas fa-user" id="korisnik" onmouseover="MouseOver3()"></i></a>
                 <a href="logout.php"> <i class="fas fa-outdent" id="izloguj" onmouseover="MouseOver4()"></i></a>
             </div>
