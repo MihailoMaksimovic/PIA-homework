@@ -87,7 +87,7 @@ if (isset($_SESSION["email"])) {
                 <input type="email" placeholder="email" name="email" required oninvalid="InvalidMsg(this);" oninput="InvalidMsg(this);" autofocus>
                 <input type="password" placeholder="lozinka" name="lozinka" required oninvalid="InvalidMsg(this);" oninput="InvalidMsg(this);" autofocus>
                 <input type="submit" name="Login" value="Login" id="openMain">
-                <p class="message "> Nemate nalog? <a href="registracija.php">Registrujte sе </a> </p>
+                <p style="background-color: black; color: white" class="message "> Nemate nalog? <a style="color: white;" href="registracija.php">Registrujte sе </a> </p>
             </form>
         </div>
     </div>
