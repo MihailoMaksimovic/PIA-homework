@@ -25,40 +25,6 @@ document.getElementById("dugme").addEventListener("click", function () {
   }
 });
 
-function MouseOver1() {
-  var element = document.getElementById("mouseover_text1");
-  element.style.visibility = "visible";
-  var element_on_leave = document.getElementById("trofej");
-  element_on_leave.onmouseleave = function () {
-    element.style.visibility = "hidden";
-  };
-}
-function MouseOver2() {
-  var element = document.getElementById("mouseover_text2");
-  element.style.visibility = "visible";
-  var element_on_leave = document.getElementById("kalendar");
-  element_on_leave.onmouseleave = function () {
-    element.style.visibility = "hidden";
-  };
-}
-function MouseOver3() {
-  var element = document.getElementById("mouseover_text3");
-  element.style.visibility = "visible";
-  var element_on_leave = document.getElementById("korisnik");
-  element_on_leave.onmouseleave = function () {
-    element.style.visibility = "hidden";
-  };
-}
-function MouseOver4() {
-  var element = document.getElementById("mouseover_text4");
-  element.style.visibility = "visible";
-  var element_on_leave = document.getElementById("izloguj");
-  element_on_leave.onmouseleave = function () {
-    element.style.visibility = "hidden";
-  };
-}
-
 function azurirajFilm(naslov) {
   document.location.href = "azurirajFilm.php?title=" + naslov;
 }
-

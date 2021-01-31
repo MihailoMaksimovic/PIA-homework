@@ -16,10 +16,16 @@ h1 {
   font-weight: 700;
   line-height: 26.4px;
 }
-
+ button {
+    background-color: black; 
+    border-radius: 40%;
+    border-color : black;
+    border-width: 2px;
+ }
 header {
   display: flex;
   flex-direction: row;
+
   justify-content: space-between;
   height: 100%;
   background: rgb(0, 0, 0);

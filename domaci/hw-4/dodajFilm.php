@@ -74,7 +74,7 @@
 
             <div class="user2">
                 <div class="data">
-                    <div class="login-page">
+                    <div class=".login-page-main">
                         <div class="form">
                             <form class="register-form" id="form-name" method="post" action="film.php" name="form1">
 

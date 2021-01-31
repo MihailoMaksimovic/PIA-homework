@@ -34,8 +34,6 @@ ENGINE = InnoDB;
 -- Dump data of "korisnici" --------------------------------
 BEGIN;
 
-INSERT INTO `korisnici`(`tip`,`ime`,`prezime`,`email`,`korisnickoIme`,`lozinka`) VALUES 
-( 'admin', 'Mihailo', 'Maksimovic', 'mihailomaksimovic541999@gmail.com', 'Miksi', 'miksi' );
 COMMIT;
 -- ---------------------------------------------------------
 

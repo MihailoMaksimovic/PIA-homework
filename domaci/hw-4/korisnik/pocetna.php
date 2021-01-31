@@ -46,9 +46,9 @@ while ($movie = mysqli_fetch_array($select)) {
 
 <header>
     <img src="../assets/imdb.png" alt="">
-    <h1  id="pageTitle"> Lista svih filmova </h1>
+    <h1 id="pageTitle"> Lista svih filmova </h1>
     <a href="../logout.php" type="button" style="height:30px;    margin-top: 25px;     margin-right: 30px;" class="btn btn-warning">
-        <span class="glyphicon glyphicon-log-out"></span> Log out
+        <span class="glyphicon glyphicon-log-out"></span> Izloguj se
     </a>
 
 </header>

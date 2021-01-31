@@ -76,7 +76,7 @@ $brojOcena = $movie['brojOcena'];
                 line-height: 26.4px;">
         <?php echo $naslov ?>
     </h1>
-    <a href="../logout.php" type="button" style="height:30px;    margin-top: 25px;     margin-right: 30px;" class="btn btn-warning">
+    <a href="pocetna.php" type="button" style="height:30px;    margin-top: 25px;     margin-right: 30px;" class="btn btn-warning">
         <span class="glyphicon glyphicon-log-out"></span> vrati se nazad
     </a>
 
@@ -86,33 +86,114 @@ $brojOcena = $movie['brojOcena'];
 
     <main>
         <div class="container mt-5">
-            <div class="row justify-content-center">
 
-            </div>
 
-            <div class="card movie_card">
-                <img src="https://www.joblo.com/assets/images/joblo/posters/2019/02/Dyow9RgX4AElAGN.jpg" class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title"><?php echo "godina izdanja: $godinaIzdanja" ?> </h5>
-                    <h5 class="card-title"><?php echo $godinaIzdanja ?> </h5>
-                    <h5 class="card-title"><?php echo $godinaIzdanja ?> </h5>
-                    <h5 class="card-title"><?php echo $godinaIzdanja ?> </h5>
-                    <h5 class="card-title"><?php echo $godinaIzdanja ?> </h5>
-                    <h5 class="card-title"><?php echo $godinaIzdanja ?> </h5>
-                    <span class="movie_info float-right"><i class="fas fa-star"></i><?php echo $ocena ?> </span>
+            <div style=" background: rgb(0,0,0);
+                        background: linear-gradient(90deg, rgba(0,0,0,1) 0%,
+                        rgba(252,218,154,1) 0%, rgba(0,0,0,1) 100%, rgba(255,255,255,1) 100%, 
+                        rgba(0,0,0,1) 100%);  display:flex ;   flex-direction: row ;" class="card movie_card">
+                <?php echo "<img class='card-img-top' style='width: 50vh ; height: 80vh ' src=" . $poster . " />"; ?>
+                <div style="float: right;" class="card-body">
+                    <h5 style=" color: orange;
+                                -webkit-text-stroke: 2px black; /* width and color */
+                                font-family: fantasy;
+                                font-size: 30px;
+                                font-style: normal;
+                                font-variant: normal;
+                                font-weight: 700;
+                                line-height: 26.4px;" class="card-title"><?php echo  $opis ?> </h5>
+                    <h5 style=" color: orange;
+                                -webkit-text-stroke: 2px black; /* width and color */
+                                font-family: fantasy;
+                                font-size: 30px;
+                                font-style: normal;
+                                font-variant: normal;
+                                font-weight: 700;
+                                line-height: 26.4px;" class="card-title"><?php echo "zanr: $zanr" ?> </h5>
+                    <h5 style=" color: orange;
+                                -webkit-text-stroke: 2px black; /* width and color */
+                                font-family: fantasy;
+                                font-size: 30px;
+                                font-style: normal;
+                                font-variant: normal;
+                                font-weight: 700;
+                                line-height: 26.4px;" class="card-title"><?php echo "scenarista: $scenarista" ?> </h5>
+                    <h5 style=" color: orange;
+                                -webkit-text-stroke: 2px black; /* width and color */
+                                font-family: fantasy;
+                                font-size: 30px;
+                                font-style: normal;
+                                font-variant: normal;
+                                font-weight: 700;
+                                line-height: 26.4px;" class="card-title"><?php echo "reziser: $reziser" ?> </h5>
+                    <h5 style=" color: orange;
+                                -webkit-text-stroke: 2px black; /* width and color */
+                                font-family: fantasy;
+                                font-size: 30px;
+                                font-style: normal;
+                                font-variant: normal;
+                                font-weight: 700;
+                                line-height: 26.4px;" class="card-title"><?php echo "producentska kuca: $producentskaKuca" ?> </h5>
+                    <h5 style=" color: orange;
+                                -webkit-text-stroke: 2px black; /* width and color */
+                                font-family: fantasy;
+                                font-size: 30px;
+                                font-style: normal;
+                                font-variant: normal;
+                                font-weight: 700;
+                                line-height: 26.4px;" class="card-title"><?php echo "glumci: $glumci" ?> </h5>
+                    <h5 style=" color: orange;
+                                -webkit-text-stroke: 2px black; /* width and color */
+                                font-family: fantasy;
+                                font-size: 30px;
+                                font-style: normal;
+                                font-variant: normal;
+                                font-weight: 700;
+                                line-height: 26.4px;" class="card-title"><?php echo "godina izdanja: $godinaIzdanja" ?> </h5>
+                    <h5 style=" color: orange;
+                                -webkit-text-stroke: 2px black; /* width and color */
+                                font-family: fantasy;
+                                font-size: 30px;
+                                font-style: normal;
+                                font-variant: normal;
+                                font-weight: 700;
+                                line-height: 26.4px;" class="card-title"><?php echo "trajanje: $trajanje min" ?> </h5>
+
+                    <span style="font-size: 5vh; color:yellow" class="movie_info float-right"><i class="fas fa-star"></i><?php echo ~~($ocena / $brojOcena) ?> </span>
+                    <span style="font-size: 5vh; color:grey" class="movie_info float-right"><i class="fa fa-users"></i><?php echo $brojOcena ?> </span>
+
+                    <div class="card-body">
+                        <h1>Oceni film </h1>
+                        <span id="zvezda5" style="font-size: 5vh; " class="movie_info float-right"><i class="fas fa-star" onclick="ocenaFilma(5)"></i></span>
+                        <span id="zvezda4" style="font-size: 5vh;" class="movie_info float-right"><i class="fas fa-star" onclick="ocenaFilma(4)"></i></span>
+                        <span id="zvezda3" style="font-size: 5vh;" class="movie_info float-right"><i class="fas fa-star" onclick="ocenaFilma(3)"></i></span>
+                        <span id="zvezda2" style="font-size: 5vh;" class="movie_info float-right"><i class="fas fa-star" onclick="ocenaFilma(2)"></i></span>
+                        <span id="zvezda1" style="font-size: 5vh;" class="movie_info float-right"><i class="fas fa-star" onclick="ocenaFilma(1)"></i></span>
+
+                        <script>
+                            var naslov = "<?php echo $naslov; ?>";
+                            var ocena = "<?php echo $ocena; ?>";
+                            ocena = ocena * 1;
+                            var brojOcena = "<?php echo $brojOcena; ?>";
+                            brojOcena = brojOcena * 1;
+                        </script>
+
+                        <button onclick="azurirajOcenu(naslov,ocena,brojOcena)" style="float: right; background-color: black ;
+                                        color: white ; 
+                                        margin-top: 15px ;
+                                        border-radius: 40%;
+                                        border-color : black;
+                                        border-width: 2px;">potvrdi</button>
+
+                    </div>
+
                 </div>
-            </div>
-        </div>
 
-        <div class="row col-md-12 justify-content-center">
-            <div class="card credits col-md-4 ">
-                <div class="card-body">
-                    <p>glasaj </p>
-                </div>
             </div>
-        </div>
-        </div>
 
+        </div>
+        </div>
+        <script type="text/javascript" src="pocetna.js"> </script>
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
