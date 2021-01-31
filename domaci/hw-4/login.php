@@ -24,11 +24,11 @@ if (isset($_POST["Login"])) {
             header("Location:./korisnik/pocetna.php");
          }
       } else {
-         echo '<span style="color:#be2f2f;text-align:center;font-size:5vw;"> Погрешна шифра </span>';
-         header("refresh:4 ; url=index.php");
+         echo '<span style="color:#be2f2f;text-align:center;font-size:5vw;"> Pogresna sifra </span>';
+         header("refresh:1.5 ; url=index.php");
       }
    } else {
-      echo '<span style="color:#be2f2f;text-align:center;font-size:5vw;"> Налог не постоји, молимо вас региструјте се</span>';
-      header("refresh:4 ; url=index.php");
+      echo '<span style="color:#be2f2f;text-align:center;font-size:5vw;">Nalog ne postoji molimo vas registrujte se </span>';
+      header("refresh:1.5 ; url=index.php");
    }
 }

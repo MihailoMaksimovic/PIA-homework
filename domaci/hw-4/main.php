@@ -71,23 +71,25 @@ while ($movie = mysqli_fetch_array($select)) {
     </header>
     <div class="center">
       <div class="movie_list">
-        <?php
+        <main>
+          <?php
 
-        foreach ($movies as $movie) {
-          $naslov =  $movie["naslov"];
-          $opis = $movie["opis"];
-          $zanr = $movie["zanr"];
-          $scenarista = $movie["scenarista"];
-          $reziser = $movie["reziser"];
-          $producentskaKuca = $movie["producentskaKuca"];
-          $glumci = $movie["glumci"];
-          $godinaIzdanja = $movie["godinaIzdanja"];
-          $poster =  $movie["poster"];
-          $trajanje =  $movie["trajanje"];
-          echo "<img style='width: 300px ; height: 300px ' onclick='azurirajFilm( \"$naslov\")'   src=" . $movie["poster"] . " />";
-          // ,\"$opis\",\"$zanr\",\"$scenarista\",\"$reziser\",\"$producentskaKuca\",\"$glumci\",\"$godinaIzdanja\",\"$poster\",\"$trajanje\",  
-        }
-        ?>
+          foreach ($movies as $movie) {
+            $naslov =  $movie["naslov"];
+            $opis = $movie["opis"];
+            $zanr = $movie["zanr"];
+            $scenarista = $movie["scenarista"];
+            $reziser = $movie["reziser"];
+            $producentskaKuca = $movie["producentskaKuca"];
+            $glumci = $movie["glumci"];
+            $godinaIzdanja = $movie["godinaIzdanja"];
+            $poster =  $movie["poster"];
+            $trajanje =  $movie["trajanje"];
+            echo "<img style='width: 300px ; height: 300px ' onclick='azurirajFilm( \"$naslov\")'   src=" . $movie["poster"] . " />";
+            // ,\"$opis\",\"$zanr\",\"$scenarista\",\"$reziser\",\"$producentskaKuca\",\"$glumci\",\"$godinaIzdanja\",\"$poster\",\"$trajanje\",  
+          }
+          ?>
+        </main>
       </div>
 
       <img src="" alt="">

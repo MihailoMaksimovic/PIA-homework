@@ -1,11 +1,4 @@
 <?php
-require "login.php";
-if (isset($_SESSION["email"])) {
-    header("location: ./korisnik/pocetna.php");
-}
-
-
-
 $servername = "localhost";
 $username = "root";
 $password = "";
@@ -63,13 +56,18 @@ CHARACTER SET = latin1
 COLLATE = latin1_swedish_ci
 ENGINE = InnoDB;";
 
-if ($connec->query($FILMOVI) === TRUE) {
+if ($connec2->query($FILMOVI) === TRUE) {
     //echo "Table imdbAllUsers created successfully";
 } else {
     //echo "Error creating table: " . $connec->error;
 }
 
 $connec2->close();
+
+require "login.php";
+if (isset($_SESSION["email"])) {
+    header("location: ./korisnik/pocetna.php");
+}
 ?>
 
 <html>

@@ -43,10 +43,10 @@ if (isset($_POST["Submit"])) {
         mysqli_stmt_bind_param($stmt, "ssssssssss", $naslov, $opis, $zanr, $scenarista, $reziser, $producentskaKuca, $glumci, $godinaIzdanja, $poster, $trajanje);
 
         if (mysqli_stmt_execute($stmt)) {
-            echo '<span style="color:#be2f2f;text-align:center;font-size:10vw; ">Uspesno ste ubbacili film u bazu podataka </span>';
+            echo '<span style="color:#be2f2f;text-align:center;font-size:5vw; ">Uspesno ste ubacili film u bazu podataka </span>';
             header("refresh:1.5 ; url= main.php");
         } else {
-            echo '<span style="color:#be2f2f;text-align:center;font-size:10vw;">Imamo problem, pokusajte ponovo </span>';
+            echo '<span style="color:#be2f2f;text-align:center;font-size:5vw;">Imamo problem, pokusajte ponovo </span>';
         }
 
         mysqli_stmt_close($stmt);

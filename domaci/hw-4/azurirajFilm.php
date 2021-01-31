@@ -65,7 +65,6 @@ $trajanje = $movie['trajanje'];
         </div>
         <ul>
             <li><a href="dodajFilm.php"> <i class="fas fa-trophy"> </i> Dodaj film </a></li>
-            <li><a href="prijava.html"> <i class="far fa-calendar"> </i> Izbrisi film </a></li>
             <li><a href="main.php"> <i class="fas fa-user"> </i> Lista filmova </a></li>
             <li><a href="logout.php"> <i class="fas fa-outdent"> </i> Izloguj se </a></li>
         </ul>
@@ -77,7 +76,6 @@ $trajanje = $movie['trajanje'];
             </div>
             <div>
                 <a href="dodajFilm.php"> <i class="fas fa-trophy" id="trofej" onmouseover="MouseOver1()"></i> </a>
-                <a href="prijava.html"> <i class="far fa-calendar" id="kalendar" onmouseover="MouseOver2()"></i></a>
                 <a href="main.php"> <i class="fas fa-user" id="korisnik" onmouseover="MouseOver3()"></i></a>
                 <a href="logout.php"> <i class="fas fa-outdent" id="izloguj" onmouseover="MouseOver4()"></i></a>
             </div>
@@ -90,14 +88,14 @@ $trajanje = $movie['trajanje'];
 
     <div class="main">
         <header>
-
+            <p id="pageTitle">Aziraj film </p>
         </header>
         <div class="center">
 
 
             <div class="user2">
                 <div class="data">
-                    <div class="login-page">
+                    <div class=".login-page-main">
                         <div class="form">
                             <div class="form">
                                 <p id="movieTitle" name="movieTitle"> <?php echo $movieTitle ?> </p>
@@ -125,7 +123,7 @@ $trajanje = $movie['trajanje'];
                             <form method="post" action="izbrisi.php" name="form1">
                                 <input hidden id="NASLOV" name="naslov2" type="text" placeholder="naslov" oninput="InvalidMsg(this);" autofocus value="<?php echo "$naslov" ?>"> </input>
                                 <!-- <input name="nazivFilma " value="<?php echo "$naslov" ?>"> -->
-                                <input style="color: red;" id="SUCCESS" type="submit" name="Submit" value="Submit"> </input>
+                                <input style="color: red;" id="SUCCESS" type="submit" name="Submit" value="Izbisi"> </input>
                             </form>
                         </div>
                     </div>
