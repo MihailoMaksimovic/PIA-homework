@@ -1,7 +1,7 @@
 <?php
 require "login.php";
 if (isset($_SESSION["email"])) {
-    header("location: main.php");
+    header("location: ./korisnik/pocetna.php");
 }
 ?>
 

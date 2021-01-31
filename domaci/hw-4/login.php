@@ -10,14 +10,19 @@ if (isset($_POST["Login"])) {
    $result = mysqli_query($link, $sql);
    if (mysqli_num_rows($result) > 0) {
       $row = mysqli_fetch_array($result);
+
       if (password_verify($lozinka, $row["lozinka"])) {
          $_SESSION["email"]  =  $email;
          $_SESSION["ime"]  =  $row["ime"];
          $_SESSION["prezime"]  =  $row["prezime"];
          $_SESSION["korisnickoIme"]  =  $row["korisnickoIme"];
          $_SESSION['lozinka']   =  $row["lozinka"];
-         $_SESSION['tip']   =  $row["admin"];
-         header("Location:main.php");
+         $_SESSION['tip']   =  $row["tip"];
+         if ($_SESSION['tip'] == "admin") {
+            header("Location:main.php");
+         } else {
+            header("Location:./korisnik/pocetna.php");
+         }
       } else {
          echo '<span style="color:#be2f2f;text-align:center;font-size:5vw;"> Погрешна шифра </span>';
          header("refresh:4 ; url=index.php");

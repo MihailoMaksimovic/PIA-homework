@@ -1,0 +1,85 @@
+html {
+  background: rgb(0, 0, 0);
+  background: linear-gradient(
+    90deg,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(199, 133, 0, 1) 24%,
+    rgba(210, 140, 0, 1) 69%,
+    rgba(0, 0, 0, 1) 100%
+  );
+  width: auto;
+}
+
+h1 {
+  color: orange;
+  -webkit-text-stroke: 2px black; /* width and color */
+  font-family: fantasy;
+  font-size: 50px;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: 700;
+  line-height: 26.4px;
+}
+
+header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  height: 100%;
+  background: rgb(0, 0, 0);
+  background: linear-gradient(
+    90deg,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(65, 64, 64, 1) 42%,
+    rgba(87, 86, 86, 1) 49%,
+    rgba(73, 72, 72, 1) 56%,
+    rgba(0, 0, 0, 1) 100%
+  );
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+main {
+  background: rgb(0, 0, 0);
+  background: linear-gradient(
+    90deg,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(199, 133, 0, 1) 24%,
+    rgba(210, 140, 0, 1) 69%,
+    rgba(0, 0, 0, 1) 100%
+  );
+  padding: 1rem;
+  display: flex;
+  width: 100%;
+  height: auto;
+  flex-direction: column;
+  justify-content: space-around;
+  flex-flow: wrap;
+  background-color: rgba(238, 255, 0, 0.829);
+}
+img {
+  width: 150px;
+}
+body {
+  color: black;
+  background-color: white;
+}
+
+body::-webkit-scrollbar {
+  width: 0.25rem;
+}
+
+body::-webkit-scrollbar-track {
+  background: #23232e;
+}
+
+body::-webkit-scrollbar-thumb {
+  background: #23232e;
+}

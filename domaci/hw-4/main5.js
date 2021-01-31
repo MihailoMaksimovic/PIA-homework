@@ -59,64 +59,6 @@ function MouseOver4() {
 }
 
 function azurirajFilm(naslov) {
-  localStorage.setItem("key", naslov);
-  document.location.href = "azurirajFilm.php";
+  document.location.href = "azurirajFilm.php?title=" + naslov;
 }
 
-
-
-/*const ime_c = document.getElementById('IME');
-const prezime_c = document.getElementById('PREZIME');
-const sifra_c = document.getElementById('SIFRA');
-const broj_c = document.getElementById('BROJ');
-const radio_c = document.getElementById('RADIO1');
-
-  
-ime_c.addEventListener('keyup', function (event) {
-    isValidName = ime_c.checkValidity();
-  if ( isValidName ) {
-    input.id("register").disabled = false ;
-  } else {
-    input.id("register").disabled = true ;
-  }
-});
-prezime_c.addEventListener('keyup', function (event) {
-    isValidName = prezime_c.checkValidity();
-    
-    if ( isValidName ) {
-        input.id("register").disabled = false;
-    } else {
-        input.id("register").disabled= true;
-    }
-  });
-  sifra_c.addEventListener('keyup', function (event) {
-    isValidName = sifra_c.checkValidity();
-    
-    if ( isValidName ) {
-        input.id("register").disabled = false;
-    } else {
-        input.id("register").disabled= true;
-    }
-  });
-  broj_c.addEventListener('keyup', function (event) {
-    isValidName = broj_c.checkValidity();
-    
-    if ( isValidName ) {
-        input.id("register").disabled = false;
-    } else {
-        input.id("register").disabled= true;
-    }
-  });
-  radio_c.addEventListener('keyup', function (event) {
-    isValidName = radio_c.checkValidity();
-    
-    if ( isValidName ) {
-        input.id("register").disabled = false;
-    } else {
-        input.id("register").disabled= true;
-    }
-  });
-  
-/*register.addEventListener('click', function (event) {
-  signUpForm.submit();
-});*/

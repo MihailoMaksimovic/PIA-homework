@@ -1,11 +1,8 @@
-function InvalidMsg(textbox) { 
-  
-    if (textbox.value === '') { 
-        textbox.setCustomValidity 
-              (' Унесите податке'); 
-    } else { 
-        textbox.setCustomValidity(''); 
-    } 
-    return true; 
+function InvalidMsg(textbox) {
+  if (textbox.value === "") {
+    textbox.setCustomValidity(" Unesite podatke");
+  } else {
+    textbox.setCustomValidity("");
+  }
+  return true;
 }
-

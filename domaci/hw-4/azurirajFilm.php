@@ -16,12 +16,35 @@ if (!$db_selected) {
     die("database ne postoji");
 }
 
-$select = mysqli_query($link, "SELECT * FROM `filmovi` WHERE naslov = '$naslov'  ");
-$movies = array();
+$naslov = "";
+$opis = "asf";
+$zanr = "asd";
+$scenarista = "";
+$reziser = "";
+$producentskaKuca = "";
+$glumci = "";
+$godinaIzdanja = "";
+$poster = "";
+$trajanje = "";
 
-while ($movie = mysqli_fetch_array($select)) {
-    $movies[] = $movie;
-}
+
+$movieTitle = $_GET["title"];
+
+$select = "SELECT * FROM `filmovi` WHERE naslov  = '$movieTitle'  ";
+
+$result = mysqli_query($link, $select);
+$movie = mysqli_fetch_array($result);
+
+$naslov = trim($movieTitle);
+$opis = $movie['opis'];
+$zanr = $movie['zanr'];
+$scenarista = $movie['scenarista'];
+$reziser = $movie['reziser'];
+$producentskaKuca = $movie['producentskaKuca'];
+$glumci = $movie['glumci'];
+$godinaIzdanja = $movie['godinaIzdanja'];
+$poster = $movie['poster'];
+$trajanje = $movie['trajanje'];
 
 
 ?>
@@ -77,42 +100,43 @@ while ($movie = mysqli_fetch_array($select)) {
                     <div class="login-page">
                         <div class="form">
                             <div class="form">
-                                <p id="movieTitle"></p>
-                                <form class="register-form" id="form-name" method="post" action="film.php" name="form1">
+                                <p id="movieTitle" name="movieTitle"> <?php echo $movieTitle ?> </p>
 
-                                    <input id="NASLOV" name="naslov" type="text" placeholder="naslov" required oninvalid="InvalidMsg(this);" oninput="InvalidMsg(this);" autofocus value="">
-                                    <input id="OPIS" name="opis" type="text" placeholder="opis" required oninvalid="InvalidMsg(this);" oninput="InvalidMsg(this);" autofocus value="">
-                                    <input id="ZANR" name="zanr" type="text" placeholder="zanr" required oninvalid="InvalidMsg(this);" oninput="InvalidMsg(this)" autofocus value=""> </input>
+                                <form class="register-form" id="form-name" method="post" action="azuriraj.php" name="form1">
 
-                                    <input id="SCENARISTA" name="scenarista" type="text" placeholder="scenarista" oninput="InvalidMsg(this);" autofocus value=""> </input>
+                                    <input id="NASLOV" name="naslov" type="text" placeholder="naslov" oninput="InvalidMsg(this);" autofocus value="<?php echo "$naslov" ?>"> </input>
+                                    <input id="OPIS" name="opis" type="text" placeholder="opis" required oninvalid="InvalidMsg(this);" oninput="InvalidMsg(this);" autofocus value=" <?php echo "$opis" ?>">
+                                    <input id="ZANR" name="zanr" type="text" placeholder="zanr" required oninvalid="InvalidMsg(this);" oninput="InvalidMsg(this)" autofocus value="<?php echo "$zanr" ?>"> </input>
 
-                                    <input id=" REZISER" name="reziser" type="text" placeholder="reziser" required oninvalid="InvalidMsg(this);" oninput="InvalidMsg(this);" autofocus value="">
-                                    <input id="PRODUCENTSKA_KUCA" name="producentskaKuca" type="text" placeholder="producentska kuca" required oninvalid="InvalidMsg(this);" oninput="InvalidMsg(this);" autofocus value=""> </input>
+                                    <input id="SCENARISTA" name="scenarista" type="text" placeholder="scenarista" oninput="InvalidMsg(this);" autofocus value="<?php echo "$scenarista" ?>"> </input>
 
-                                    <input id="GLUMCI" name="glumci" type="text" placeholder="glumci" required oninvalid="InvalidMsg(this);" oninput="InvalidMsg(this);" autofocus value=""> </input>
-                                    <input id="GODINA_IZDANJA" name="godinaIzdanja" type="number" placeholder="godina izdanja" required oninvalid="InvalidMsg(this);" oninput="InvalidMsg(this);" autofocus value=""> </input>
-                                    <input id="POSTER" name="poster" type="text" placeholder="poster" required oninvalid="InvalidMsg(this);" oninput="InvalidMsg(this);" autofocus value=""> </input>
-                                    <input id="TRAJANJE" name="trajanje" type="number" placeholder="trajanje" required oninvalid="InvalidMsg(this);" oninput="InvalidMsg(this);" autofocus value=""> </input>
+                                    <input id=" REZISER" name="reziser" type="text" placeholder="reziser" required oninvalid="InvalidMsg(this);" oninput="InvalidMsg(this);" autofocus value="<?php echo "$reziser" ?>">
+                                    <input id="PRODUCENTSKA_KUCA" name="producentskaKuca" type="text" placeholder="producentska kuca" required oninvalid="InvalidMsg(this);" oninput="InvalidMsg(this);" autofocus value="<?php echo "$producentskaKuca" ?>"> </input>
+
+                                    <input id="GLUMCI" name="glumci" type="text" placeholder="glumci" required oninvalid="InvalidMsg(this);" oninput="InvalidMsg(this);" autofocus value="<?php echo "$glumci" ?>"> </input>
+                                    <input id="GODINA_IZDANJA" name="godinaIzdanja" type="number" placeholder="godina izdanja" required oninvalid="InvalidMsg(this);" oninput="InvalidMsg(this);" autofocus value="<?php echo "$godinaIzdanja" ?>"> </input>
+                                    <input id="POSTER" name="poster" type="text" placeholder="poster" required oninvalid="InvalidMsg(this);" oninput="InvalidMsg(this);" autofocus value="<?php echo "$poster" ?>"> </input>
+                                    <input id="TRAJANJE" name="trajanje" type="number" placeholder="trajanje" required oninvalid="InvalidMsg(this);" oninput="InvalidMsg(this);" autofocus value="<?php echo "$trajanje" ?>"> </input>
 
                                     <input id="SUCCESS" type="submit" name="Submit" value="Submit">
 
                                 </form>
                             </div>
+                            <form method="post" action="izbrisi.php" name="form1">
+                                <input hidden id="NASLOV" name="naslov2" type="text" placeholder="naslov" oninput="InvalidMsg(this);" autofocus value="<?php echo "$naslov" ?>"> </input>
+                                <!-- <input name="nazivFilma " value="<?php echo "$naslov" ?>"> -->
+                                <input style="color: red;" id="SUCCESS" type="submit" name="Submit" value="Submit"> </input>
+                            </form>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <script>
-        function writeTitle() {
-            console.log(localStorage.getItem("key"));
-            document.getElementById("movieTitle").innerHTML = localStorage.getItem("key");
-        }
 
-        writeTitle();
-    </script>";
-    <script type="text/javascript" src="main5.js"> </script>
+    <script type="text/javascript" src="main5.js">
+
+    </script>
 </body>
 
 </html>

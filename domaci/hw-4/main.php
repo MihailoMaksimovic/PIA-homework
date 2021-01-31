@@ -1,6 +1,6 @@
 <?php
 session_start();
-if (!isset($_SESSION['email'])) {
+if ($_SESSION['tip'] == null) {
   header('Location: index.php');
   exit();
 }
@@ -47,7 +47,6 @@ while ($movie = mysqli_fetch_array($select)) {
     </div>
     <ul>
       <li><a href="dodajFilm.php"> <i class="fas fa-trophy"> </i> Dodaj film </a></li>
-
       <li><a href="main.php"> <i class="fas fa-user"> </i> Lista filmova </a></li>
       <li><a href="logout.php"> <i class="fas fa-outdent"> </i> Izloguj se </a></li>
     </ul>
@@ -71,28 +70,24 @@ while ($movie = mysqli_fetch_array($select)) {
       <p id="pageTitle"> Lista svih filmova </p>
     </header>
     <div class="center">
-
-
       <div class="movie_list">
-
-
-
-
         <?php
 
         foreach ($movies as $movie) {
-          $title =  $movie["naslov"];
-          echo "<img style='width: 300px ; height: 300px ' onclick='azurirajFilm( \"$title\" )'   src=" .  $movie["poster"] . " />";
+          $naslov =  $movie["naslov"];
+          $opis = $movie["opis"];
+          $zanr = $movie["zanr"];
+          $scenarista = $movie["scenarista"];
+          $reziser = $movie["reziser"];
+          $producentskaKuca = $movie["producentskaKuca"];
+          $glumci = $movie["glumci"];
+          $godinaIzdanja = $movie["godinaIzdanja"];
+          $poster =  $movie["poster"];
+          $trajanje =  $movie["trajanje"];
+          echo "<img style='width: 300px ; height: 300px ' onclick='azurirajFilm( \"$naslov\")'   src=" . $movie["poster"] . " />";
+          // ,\"$opis\",\"$zanr\",\"$scenarista\",\"$reziser\",\"$producentskaKuca\",\"$glumci\",\"$godinaIzdanja\",\"$poster\",\"$trajanje\",  
         }
-
-
         ?>
-
-
-
-
-
-
       </div>
 
       <img src="" alt="">

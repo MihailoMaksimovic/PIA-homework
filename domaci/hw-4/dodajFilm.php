@@ -67,7 +67,7 @@
 
     <div class="main">
         <header>
-
+            <p id="pageTitle"> Dodaj novi film </p>
         </header>
         <div class="center">
 

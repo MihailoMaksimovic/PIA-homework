@@ -40,7 +40,7 @@ if (isset($_POST["Submit"])) {
     $sql = "INSERT INTO filmovi (naslov,opis ,zanr,scenarista,reziser, producentskaKuca, glumci ,godinaIzdanja ,poster ,trajanje) VALUES(?,?,?,?,?,?,?,?,?,?) ";
 
     if ($stmt = mysqli_prepare($link, $sql)) {
-        mysqli_stmt_bind_param($stmt, "ssssssssss", $naslov, $opis, $zanr, $scenarista, $reziser, $producentskaKuca, $glumci, $godinaIzdanja, $poster, $trajanje,);
+        mysqli_stmt_bind_param($stmt, "ssssssssss", $naslov, $opis, $zanr, $scenarista, $reziser, $producentskaKuca, $glumci, $godinaIzdanja, $poster, $trajanje);
 
         if (mysqli_stmt_execute($stmt)) {
             echo '<span style="color:#be2f2f;text-align:center;font-size:10vw; ">Uspesno ste ubbacili film u bazu podataka </span>';
@@ -52,10 +52,3 @@ if (isset($_POST["Submit"])) {
         mysqli_stmt_close($stmt);
     }
 }
-
-?>
-
-<!DOCTYPE html>
-<html>
-
-</html>
